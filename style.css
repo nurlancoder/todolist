@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+body {
+  background: linear-gradient(120deg, #84fab0, #8fd3f4);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  z-index: -1;
+  animation: moveBackground 15s linear infinite;
+}
+@keyframes moveBackground {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+.header {
+  background-image: url('https://source.unsplash.com/800x300/?inspiration,motivation');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+.header h1 {
+  font-size: 2.8rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.quote {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  animation: fadeIn 5s infinite;
+}
+@keyframes fadeIn {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.content {
+  padding: 20px;
+}
+.add-goal {
+  display: flex;
+  margin-bottom: 20px;
+}
+.add-goal input {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #8fd3f4;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.add-goal button {
+  padding: 15px 20px;
+  margin-left: 10px;
+  background: #8fd3f4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+.add-goal button:hover {
+  transform: scale(1.1);
+  background: #6ec1e4;
+}
+.goal-list {
+  list-style: none;
+}
+.goal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e6f7ff;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.goal-item button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.goal-item button:hover {
+  transform: scale(1.1);
+  background: #ff3b2f;
+}
